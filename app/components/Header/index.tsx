@@ -8,7 +8,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header>
+    <header className="fixed z-1000 bg-secondary w-full">
       {/* Cabeçalho de informações */}
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start text-sm gap-2 lg:gap-0 px-10 lg:px-20 py-4 lg:py-2 bg-primary text-secondary">
         {/* Contatos */}

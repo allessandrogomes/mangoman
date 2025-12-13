@@ -10,20 +10,29 @@ import { HeroSection } from './components/HeroSection';
 import { WhoWeAre } from './components/WhoWeAre';
 import { OurVarieties } from './components/OurVarieties';
 import { GuaranteedQuality } from './components/GuaranteedQuality';
+import { Certifications } from './components/Certifications';
+import { Gallery } from './components/Gallery';
+import { WhereAreWe } from './components/WhereAreWe';
+import { RequestAQuote } from './components/RequestAQuote';
+import { Footer } from './components/Footer';
 
 export default function Home() {
   return (
     <>
       <Header />
 
-      <main>
+      <main className='pt-[120px]'>
         <HeroSection />
         <WhoWeAre />
         <OurVarieties />
         <GuaranteedQuality />
+        <Certifications />
+        <Gallery />
+        <WhereAreWe />
+        <RequestAQuote />
       </main>
 
-      <footer></footer>
+      <Footer />
     </>
   );
 }

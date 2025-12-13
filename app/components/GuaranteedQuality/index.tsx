@@ -6,7 +6,7 @@ import { Card } from "./Card";
 
 export function GuaranteedQuality() {
     return (
-        <SectionLayout>
+        <SectionLayout className="mb-[200px]">
             <HeaderSection
                 title="Qualidade garantida"
                 subtitle="Da colheita ao embarque, seguimos padrões rigorosos para assegurar frescor, segurança e conformidade global"
