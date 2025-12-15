@@ -2,11 +2,12 @@ import { Cpu, MapPinned, Package, TreeDeciduous, Truck } from "lucide-react";
 import { HeaderSection } from "../shared/HeaderSection";
 import { SectionLayout } from "../shared/SectionLayout";
 import { Card } from "./Card";
+import { forwardRef } from "react";
 
 
-export function GuaranteedQuality() {
+export const GuaranteedQuality = forwardRef<HTMLElement>((_, ref) => {
     return (
-        <SectionLayout className="mb-[200px]">
+        <SectionLayout className="mb-[200px]" ref={ref}>
             <HeaderSection
                 title="Qualidade garantida"
                 subtitle="Da colheita ao embarque, seguimos padrões rigorosos para assegurar frescor, segurança e conformidade global"
@@ -42,4 +43,6 @@ export function GuaranteedQuality() {
             </div>
         </SectionLayout>
     )
-}
+})
+
+GuaranteedQuality.displayName = 'GuaranteedQuality'

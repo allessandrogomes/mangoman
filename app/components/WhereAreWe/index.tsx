@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import { HeaderSection } from "../shared/HeaderSection";
 import { SectionLayout } from "../shared/SectionLayout";
 
 
-export function WhereAreWe() {
+export const WhereAreWe = forwardRef<HTMLElement>((_, ref) => {
     return (
-        <SectionLayout className="mb-[200px]">
+        <SectionLayout className="mb-[200px]" ref={ref}>
             <HeaderSection 
                 title="Onde estamos"
                 subtitle="Escritório central, facilitando o acesso e o atendimento aos clientes"
@@ -24,4 +25,6 @@ export function WhereAreWe() {
             </div>
         </SectionLayout>
     )
-}
+})
+
+WhereAreWe.displayName = 'WhereAreWe'

@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { HeaderSection } from "../shared/HeaderSection";
 import { SectionLayout } from "../shared/SectionLayout";
 import { Input } from "./Input";
@@ -49,9 +50,9 @@ const interests = [
     { label: "Outros assuntos", value: "other" },
 ];
 
-export function RequestAQuote() {
+export const RequestAQuote = forwardRef<HTMLElement>((_, ref) => {
     return (
-        <SectionLayout className="bg-gradient-to-b from-primary to-green-900 pb-20">
+        <SectionLayout className="bg-gradient-to-b from-primary to-green-900 pb-20" ref={ref}>
             <HeaderSection
                 title="Solicite uma cotação"
                 subtitle="Fale com nossa equipe sobre exportações, parcerias e disponibilidade de produtos"
@@ -89,4 +90,6 @@ export function RequestAQuote() {
             </div>
         </SectionLayout>
     )
-}
+})
+
+RequestAQuote.displayName = 'RequestAQuote'

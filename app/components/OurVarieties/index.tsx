@@ -1,12 +1,13 @@
 
+import { forwardRef } from "react";
 import { HeaderSection } from "../shared/HeaderSection";
 import { SectionLayout } from "../shared/SectionLayout";
 import { Card } from "./Card";
 
 
-export function OurVarieties() {
+export const OurVarieties = forwardRef<HTMLElement>((_, ref) => {
     return (
-        <SectionLayout>
+        <SectionLayout ref={ref}>
             <HeaderSection
                 title="Nossas variedades"
                 titleColor="tertiary"
@@ -69,4 +70,6 @@ export function OurVarieties() {
             </div>
         </SectionLayout>
     )
-}
+})
+
+OurVarieties.displayName = 'OurVarieties'

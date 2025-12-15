@@ -1,13 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-
+import { forwardRef } from "react";
 import { HeaderSection } from "../shared/HeaderSection";
 import { SectionLayout } from "../shared/SectionLayout";
 
-
-
-export function WhoWeAre() {
+export const WhoWeAre = forwardRef<HTMLElement>((_, ref) => {
     return (
-        <SectionLayout>
+        <SectionLayout ref={ref}>
             <HeaderSection
                 title="Quem somos"
                 subtitle="Uma empresa especializada na exportação de manga brasileira,
@@ -50,4 +48,6 @@ export function WhoWeAre() {
             </div>
         </SectionLayout>
     )
-}
+});
+
+WhoWeAre.displayName = 'WhoWeAre'

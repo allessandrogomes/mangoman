@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { HeaderSection } from "../shared/HeaderSection";
 import { SectionLayout } from "../shared/SectionLayout";
 
@@ -20,9 +21,9 @@ const certifications = [
     }
 ]
 
-export function Certifications() {
+export const Certifications = forwardRef<HTMLElement>((_, ref) => {
     return (
-        <SectionLayout className="mb-[200px]">
+        <SectionLayout className="mb-[200px]" ref={ref}>
             <HeaderSection
                 title="Certificações"
                 subtitle="Atendemos aos principais padrões internacionais para exportação de frutas"
@@ -38,4 +39,6 @@ export function Certifications() {
             </div>
         </SectionLayout>
     )
-}
+})
+
+Certifications.displayName = 'Certifications'

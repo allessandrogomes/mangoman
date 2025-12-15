@@ -1,6 +1,8 @@
-export function HeroSection() {
+import { forwardRef } from "react"
+
+export const HeroSection = forwardRef<HTMLElement>((_, ref) => { 
     return (
-        <section className='h-[calc(100dvh-120px)]'>
+        <section className='h-[calc(100dvh-120px)]' ref={ref}>
             <div className='w-full h-full overflow-hidden relative'>
                 <video
                     autoPlay
@@ -16,4 +18,6 @@ export function HeroSection() {
             </div>
         </section>
     )
-}
+})
+
+HeroSection.displayName = 'HeroSection'

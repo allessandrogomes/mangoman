@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import { HeaderSection } from "../shared/HeaderSection";
 import { SectionLayout } from "../shared/SectionLayout";
 import dynamic from "next/dynamic";
@@ -32,13 +32,13 @@ const items = [
     { id: "20", img: "/gallery/10.png", url: "https://example.com/three", height: 400 },
 ];
 
-export function Gallery() {
-    const ref = useRef<HTMLDivElement | null>(null);
+export const Gallery = forwardRef<HTMLElement>((_, ref) => {
+    const refMansory = useRef<HTMLDivElement | null>(null);
     const [visible, setVisible] = useState(false);
     const [minHeight, setMinHeight] = useState(200);
 
     useEffect(() => {
-        const el = ref.current;
+        const el = refMansory.current;
         if (!el) return;
 
         const observer = new IntersectionObserver(
@@ -59,7 +59,7 @@ export function Gallery() {
     }, []);
 
     return (
-        <SectionLayout className="relative">
+        <SectionLayout className="relative" ref={ref}>
             <HeaderSection
                 title="Galeria"
                 subtitle="Conheça nossa produção, estrutura e qualidade de perto"
@@ -67,7 +67,7 @@ export function Gallery() {
                 subtitleColor="quaternary"
             />
 
-            <div ref={ref} className="mt-5 relative" style={{ minHeight }}>
+            <div ref={refMansory} className="mt-5 relative" style={{ minHeight }}>
                 {visible && (
                     <Masonry
                         onHeightChange={setMinHeight}
@@ -85,4 +85,6 @@ export function Gallery() {
             </div>
         </SectionLayout>
     )
-}
+})
+
+Gallery.displayName = 'Gallery'

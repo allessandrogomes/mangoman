@@ -4,7 +4,27 @@
 import { Mail, Menu, Phone } from 'lucide-react';
 import { useState } from 'react';
 
-export function Header() {
+interface IHeaderProps {
+  onHero: () => void;
+  onWhoWeAre: () => void;
+  onVarieties: () => void;
+  onQuality: () => void;
+  onCertifications: () => void;
+  onGallery: () => void;
+  onWhere: () => void;
+  onQuote: () => void;
+};
+
+export function Header({
+  onHero,
+  onWhoWeAre,
+  onVarieties,
+  onQuality,
+  onCertifications,
+  onGallery,
+  onWhere,
+  onQuote
+}: IHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,7 +32,7 @@ export function Header() {
       {/* Cabeçalho de informações */}
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start text-sm gap-2 lg:gap-0 px-10 lg:px-20 py-4 lg:py-2 bg-primary text-secondary">
         {/* Contatos */}
-        <div className="flex flex-col lg:flex-row gap-2 lg:gap-8">
+        <div className="hidden lg:flex flex-col lg:flex-row gap-2 lg:gap-8">
           <span className="flex gap-2 items-center">
             <Phone /> +55 (87) 9990284-4482
           </span>
@@ -45,28 +65,28 @@ export function Header() {
         {/* Barra de navegação */}
         <nav className="hidden lg:block">
           <ul className="flex gap-6">
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onHero} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Início
             </li>
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onWhoWeAre} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Sobre
             </li>
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onVarieties} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Produtos
             </li>
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onQuality} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Processos
             </li>
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onCertifications} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Certificações
             </li>
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onGallery} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Galeria
             </li>
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onWhere} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Localização
             </li>
-            <li className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li onClick={onQuote} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
               Contato
             </li>
           </ul>
@@ -92,14 +112,86 @@ export function Header() {
           </button>
 
           <ul className="flex flex-col gap-4 text-lg">
-            <li className="cursor-pointer">Início</li>
-            <li className="cursor-pointer">Sobre</li>
-            <li className="cursor-pointer">Produtos</li>
-            <li className="cursor-pointer">Processos</li>
-            <li className="cursor-pointer">Certificações</li>
-            <li className="cursor-pointer">Galeria</li>
-            <li className="cursor-pointer">Localização</li>
-            <li className="cursor-pointer">Contato</li>
+            <li
+              onClick={() => {
+                onHero();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Início
+            </li>
+
+            <li
+              onClick={() => {
+                onWhoWeAre();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Sobre
+            </li>
+
+            <li
+              onClick={() => {
+                onVarieties();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Produtos
+            </li>
+
+            <li
+              onClick={() => {
+                onQuality();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Processos
+            </li>
+
+            <li
+              onClick={() => {
+                onCertifications();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Certificações
+            </li>
+
+            <li
+              onClick={() => {
+                onGallery();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Galeria
+            </li>
+
+            <li
+              onClick={() => {
+                onWhere();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Localização
+            </li>
+
+            <li
+              onClick={() => {
+                onQuote();
+                setIsOpen(false);
+              }}
+              className="cursor-pointer"
+            >
+              Contato
+            </li>
+
           </ul>
         </div>
       </div>
