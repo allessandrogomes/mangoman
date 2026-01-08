@@ -13,7 +13,7 @@ interface IHeaderProps {
   onGallery: () => void;
   onWhere: () => void;
   onQuote: () => void;
-};
+}
 
 export function Header({
   onHero,
@@ -23,7 +23,7 @@ export function Header({
   onCertifications,
   onGallery,
   onWhere,
-  onQuote
+  onQuote,
 }: IHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -58,35 +58,59 @@ export function Header({
       {/* Cabeçalho de navegação */}
       <div className="h-20 flex justify-between items-center px-10 lg:px-20">
         {/* Logo */}
-        <a href="#">
-          <img src="./logo.png" alt="MangoMan Logo" />
+        <a href="#" className="w-40">
+          <img src="./logo.png" alt="MangoMan Logo" className="object-cover" />
         </a>
 
         {/* Barra de navegação */}
         <nav className="hidden lg:block">
           <ul className="flex gap-6">
-            <li onClick={onHero} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onHero}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Início
             </li>
-            <li onClick={onWhoWeAre} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onWhoWeAre}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Sobre
             </li>
-            <li onClick={onVarieties} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onVarieties}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Produtos
             </li>
-            <li onClick={onQuality} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onQuality}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Processos
             </li>
-            <li onClick={onCertifications} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onCertifications}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Certificações
             </li>
-            <li onClick={onGallery} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onGallery}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Galeria
             </li>
-            <li onClick={onWhere} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onWhere}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Localização
             </li>
-            <li onClick={onQuote} className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+            <li
+              onClick={onQuote}
+              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+            >
               Contato
             </li>
           </ul>
@@ -191,7 +215,6 @@ export function Header({
             >
               Contato
             </li>
-
           </ul>
         </div>
       </div>
