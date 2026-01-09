@@ -17,7 +17,7 @@ export const WhoWeAre = forwardRef<HTMLElement>((_, ref) => {
           <div className="w-full sm:w-[350px]">
             <img
               src="./ceo.jpg"
-              alt="Imagem de uma fazenda de mangas"
+              alt="Foto de Willian Aislan"
               className="rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.15)]"
             />
           </div>
