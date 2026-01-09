@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { Mail, Menu, Phone } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Menu, Phone } from 'lucide-react';
 import { useState } from 'react';
 
 interface IHeaderProps {
@@ -30,33 +30,33 @@ export function Header({
   return (
     <header className="fixed z-1000 bg-secondary w-full">
       {/* Cabeçalho de informações */}
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start text-sm gap-2 lg:gap-0 px-10 lg:px-20 py-4 lg:py-2 bg-primary text-secondary">
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start text-sm gap-2 lg:gap-0 px-10 lg:px-20 py-2 bg-primary text-secondary">
         {/* Contatos */}
         <div className="hidden lg:flex flex-col lg:flex-row gap-2 lg:gap-8">
           <span className="flex gap-2 items-center">
-            <Phone /> +55 (87) 9990284-4482
+            <Phone /> +55 74 98133-4117
           </span>
           <span className="flex gap-2 items-center">
-            <Mail /> contato@empresa.com.br
+            <Mail /> willianaislan@mangomanexportbrazil.com
           </span>
         </div>
 
         {/* Redes sociais */}
         <div className="flex gap-4">
-          <a href="#" target="_blank">
-            <img src="./facebook-icon.png" alt="Facebook Icon" />
+          <a href="https://www.instagram.com/mangomanoficial" target="_blank">
+            <Instagram />
           </a>
-          <a href="#" target="_blank">
-            <img src="./instagram-icon.png" alt="Instagram Icon" />
-          </a>
-          <a href="#" target="_blank">
-            <img src="./linkedin-icon.png" alt="LinkedIn Icon" />
+          <a
+            href="https://www.linkedin.com/in/willian-lima-443a084b/"
+            target="_blank"
+          >
+            <Linkedin />
           </a>
         </div>
       </div>
 
       {/* Cabeçalho de navegação */}
-      <div className="h-20 flex justify-between items-center px-10 lg:px-20">
+      <div className="h-20 flex justify-between items-center px-5 lg:px-20">
         {/* Logo */}
         <a href="#" className="w-40">
           <img src="./logo.png" alt="MangoMan Logo" className="object-cover" />

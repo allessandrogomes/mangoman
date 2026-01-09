@@ -1,4 +1,4 @@
-import { ReactNode, forwardRef } from "react";
+import { ReactNode, forwardRef } from 'react';
 
 interface ISectionLayout {
   children: ReactNode;
@@ -10,12 +10,12 @@ export const SectionLayout = forwardRef<HTMLElement, ISectionLayout>(
     return (
       <section
         ref={ref}
-        className={`pt-10 xl:pt-20 px-10 xl:px-20 flex flex-col gap-8 ${className ?? ""}`}
+        className={`pt-10 xl:pt-20 px-5 xl:px-20 flex flex-col gap-8 ${className ?? ''}`}
       >
         {children}
       </section>
     );
-  }
+  },
 );
 
-SectionLayout.displayName = "SectionLayout";
+SectionLayout.displayName = 'SectionLayout';

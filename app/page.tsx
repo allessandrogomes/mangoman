@@ -1,4 +1,5 @@
-'use client'
+/* eslint-disable @next/next/no-img-element */
+'use client';
 
 import '@fontsource/poppins';
 import '@fontsource/poppins/300.css';
@@ -35,9 +36,7 @@ export default function Home() {
     const HEADER_HEIGHT = 120;
 
     const top =
-      ref.current.getBoundingClientRect().top +
-      window.scrollY -
-      HEADER_HEIGHT;
+      ref.current.getBoundingClientRect().top + window.scrollY - HEADER_HEIGHT;
 
     window.scrollTo({ top, behavior: 'smooth' });
   };
@@ -55,7 +54,7 @@ export default function Home() {
         onQuote={() => scrollTo(quoteRef)}
       />
 
-      <main className='pt-[120px]'>
+      <main className="pt-[120px]">
         <HeroSection ref={heroRef} />
         <WhoWeAre ref={whoWeAreRef} />
         <OurVarieties ref={varietiesRef} />
@@ -64,6 +63,13 @@ export default function Home() {
         <Gallery ref={galleryRef} />
         <WhereAreWe ref={whereAreWeRef} />
         <RequestAQuote ref={quoteRef} />
+        <a
+          className="w-15 lg:w-20 h-15 lg:h-20 fixed right-5 bottom-5 z-10 cursor-pointer"
+          href="https://wa.me/5574981334117"
+          target="_blank"
+        >
+          <img src="/whatsapp-icon.png" alt="Ícone da Logo do WhatsApp" />
+        </a>
       </main>
 
       <Footer />

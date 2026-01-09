@@ -43,12 +43,6 @@ const items = [
     height: 400,
   },
   {
-    id: '7',
-    img: '/gallery/7.jpg',
-    url: 'https://example.com/three',
-    height: 300,
-  },
-  {
     id: '8',
     img: '/gallery/8.jpg',
     url: 'https://example.com/three',

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { Mail, MapPin, Phone } from 'lucide-react';
 
@@ -5,7 +6,7 @@ export function Footer() {
   return (
     <footer className="flex flex-col md:flex-row gap-10 md:gap-5 md:justify-around flex-wrap bg-tertiary text-secondary p-10">
       <div className="h-full flex flex-col gap-3 justify-center max-w-[400px]">
-        <a href="#" className="mb-5">
+        <a href="#" className="mb-5 w-40">
           <img
             src="./logo-white.svg"
             alt="MangoMan Logo"
