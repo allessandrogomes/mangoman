@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="flex flex-col md:flex-row gap-10 md:gap-5 md:justify-around flex-wrap bg-tertiary text-secondary p-10">
+    <footer className="flex flex-col md:flex-row gap-10 md:gap-5 md:justify-around flex-wrap bg-tertiary text-xs min-[375px]:text-sm text-secondary p-5 xl:p-10">
       <div className="h-full flex flex-col gap-3 justify-center max-w-[400px]">
         <a href="#" className="mb-5 w-40">
           <img
@@ -14,44 +14,44 @@ export function Footer() {
           />
         </a>
         <h4 className="flex gap-1 font-semibold">
-          <MapPin className="min-w-[24px]" /> Rua Joaquim Nabuco, 541 - Centro,
-          Petrolina - PE, 56.302-140
+          <MapPin className="min-w-[20px]" size={20} /> Empresarial Trade Center
+          - R. Joaquim Nabuco, 9° Floor - Center, Petrolina - PE, 56304-040
         </h4>
         <h4 className="flex gap-1 font-semibold">
-          <Mail /> contato@empresa.com.br
+          <Mail size={20} /> willianaislan@mangomanexportbrazil.com
         </h4>
         <h4 className="flex gap-1 font-semibold">
-          <Phone /> +55 (87) 9990284-4482r
+          <Phone size={20} /> +55 74 98133-4117
         </h4>
       </div>
 
       <div>
-        <h3 className="uppercase font-bold mb-5 text-2xl">Mapa Web</h3>
+        <h3 className="uppercase font-bold mb-5 text-2xl">Web Map</h3>
         <nav>
           <ul className="flex flex-col gap-2">
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Início
+              Home
             </li>
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Sobre
+              About
             </li>
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Produtos
+              Products
             </li>
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Processos
+              Processes
             </li>
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Certificações
+              Certifications
             </li>
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Galeria
+              Gallery
             </li>
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Localização
+              Localization
             </li>
             <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
-              Contato
+              Contact
             </li>
           </ul>
         </nav>
@@ -59,10 +59,10 @@ export function Footer() {
 
       <div className="flex flex-col gap-2">
         <h4>
-          Todos os direitos reservados <strong>MangoMan</strong> &copy; 2026
+          All rights reserved <strong>MangoMan</strong> &copy; 2026
         </h4>
         <h4>
-          Desenvolvido por{' '}
+          Developed by{' '}
           <a
             href="https://valebytes.com.br"
             target="_blank"

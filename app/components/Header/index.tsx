@@ -69,49 +69,49 @@ export function Header({
               onClick={onHero}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Início
+              Home
             </li>
             <li
               onClick={onWhoWeAre}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Sobre
+              About
             </li>
             <li
               onClick={onVarieties}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Produtos
+              Products
             </li>
             <li
               onClick={onQuality}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Processos
+              Processes
             </li>
             <li
               onClick={onCertifications}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Certificações
+              Certifications
             </li>
             <li
               onClick={onGallery}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Galeria
+              Gallery
             </li>
             <li
               onClick={onWhere}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Localização
+              Localization
             </li>
             <li
               onClick={onQuote}
               className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
             >
-              Contato
+              Contact
             </li>
           </ul>
         </nav>
@@ -143,7 +143,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Início
+              Home
             </li>
 
             <li
@@ -153,7 +153,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Sobre
+              About
             </li>
 
             <li
@@ -163,7 +163,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Produtos
+              Products
             </li>
 
             <li
@@ -173,7 +173,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Processos
+              Processes
             </li>
 
             <li
@@ -183,7 +183,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Certificações
+              Certifications
             </li>
 
             <li
@@ -193,7 +193,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Galeria
+              Gallery
             </li>
 
             <li
@@ -203,7 +203,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Localização
+              Localization
             </li>
 
             <li
@@ -213,7 +213,7 @@ export function Header({
               }}
               className="cursor-pointer"
             >
-              Contato
+              Contact
             </li>
           </ul>
         </div>

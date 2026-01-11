@@ -108,14 +108,194 @@ const items = [
     url: 'https://example.com/three',
     height: 500,
   },
+  {
+    id: '19',
+    img: '/gallery/19.jpg',
+    url: 'https://example.com/one',
+    height: 350,
+  },
+  {
+    id: '20',
+    img: '/gallery/20.jpg',
+    url: 'https://example.com/two',
+    height: 450,
+  },
+  {
+    id: '21',
+    img: '/gallery/21.jpg',
+    url: 'https://example.com/three',
+    height: 300,
+  },
+  {
+    id: '22',
+    img: '/gallery/22.jpg',
+    url: 'https://example.com/three',
+    height: 500,
+  },
+  {
+    id: '23',
+    img: '/gallery/23.jpg',
+    url: 'https://example.com/three',
+    height: 250,
+  },
+  {
+    id: '24',
+    img: '/gallery/24.jpg',
+    url: 'https://example.com/three',
+    height: 400,
+  },
+  {
+    id: '25',
+    img: '/gallery/25.jpg',
+    url: 'https://example.com/three',
+    height: 450,
+  },
+  {
+    id: '26',
+    img: '/gallery/26.jpg',
+    url: 'https://example.com/three',
+    height: 350,
+  },
+  {
+    id: '27',
+    img: '/gallery/27.jpg',
+    url: 'https://example.com/three',
+    height: 500,
+  },
+  {
+    id: '28',
+    img: '/gallery/28.jpg',
+    url: 'https://example.com/one',
+    height: 300,
+  },
+  {
+    id: '29',
+    img: '/gallery/29.jpg',
+    url: 'https://example.com/two',
+    height: 500,
+  },
+  {
+    id: '30',
+    img: '/gallery/30.jpg',
+    url: 'https://example.com/three',
+    height: 350,
+  },
+  {
+    id: '31',
+    img: '/gallery/31.jpg',
+    url: 'https://example.com/three',
+    height: 400,
+  },
+  {
+    id: '32',
+    img: '/gallery/32.jpg',
+    url: 'https://example.com/three',
+    height: 250,
+  },
+  {
+    id: '33',
+    img: '/gallery/33.jpg',
+    url: 'https://example.com/three',
+    height: 450,
+  },
+  {
+    id: '34',
+    img: '/gallery/34.jpg',
+    url: 'https://example.com/three',
+    height: 300,
+  },
+  {
+    id: '35',
+    img: '/gallery/35.jpg',
+    url: 'https://example.com/three',
+    height: 500,
+  },
+  {
+    id: '36',
+    img: '/gallery/36.jpg',
+    url: 'https://example.com/one',
+    height: 350,
+  },
+  {
+    id: '37',
+    img: '/gallery/37.jpg',
+    url: 'https://example.com/two',
+    height: 450,
+  },
+  {
+    id: '38',
+    img: '/gallery/38.jpg',
+    url: 'https://example.com/three',
+    height: 300,
+  },
+  {
+    id: '39',
+    img: '/gallery/39.jpg',
+    url: 'https://example.com/three',
+    height: 500,
+  },
+  {
+    id: '40',
+    img: '/gallery/40.jpg',
+    url: 'https://example.com/three',
+    height: 250,
+  },
+  {
+    id: '41',
+    img: '/gallery/41.jpg',
+    url: 'https://example.com/three',
+    height: 400,
+  },
+  {
+    id: '42',
+    img: '/gallery/42.jpg',
+    url: 'https://example.com/three',
+    height: 450,
+  },
+  {
+    id: '43',
+    img: '/gallery/43.jpg',
+    url: 'https://example.com/three',
+    height: 350,
+  },
+  {
+    id: '44',
+    img: '/gallery/44.jpg',
+    url: 'https://example.com/three',
+    height: 500,
+  },
+  {
+    id: '45',
+    img: '/gallery/45.jpg',
+    url: 'https://example.com/one',
+    height: 300,
+  },
+  {
+    id: '46',
+    img: '/gallery/46.jpg',
+    url: 'https://example.com/two',
+    height: 500,
+  },
+  {
+    id: '47',
+    img: '/gallery/47.jpg',
+    url: 'https://example.com/three',
+    height: 350,
+  },
+  {
+    id: '48',
+    img: '/gallery/48.jpg',
+    url: 'https://example.com/three',
+    height: 400,
+  },
 ];
 
 export const Gallery = forwardRef<HTMLElement>((_, ref) => {
   return (
     <SectionLayout className="relative" ref={ref}>
       <HeaderSection
-        title="Galeria"
-        subtitle="Conheça nossa produção, estrutura e qualidade de perto"
+        title="Photo gallery"
+        subtitle="Get to know our production, facilities, and quality up close"
         titleColor="tertiary"
         subtitleColor="quaternary"
       />
