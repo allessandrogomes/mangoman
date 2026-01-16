@@ -1,19 +1,42 @@
-
 interface ISelect {
-    options: {
-        label: string
-        value: string
-    }[]
-    label: string
+  options: {
+    label: string;
+    value: string;
+  }[];
+  defaultOption: string;
+  name: string;
+  label: string;
+  value: string;
+  onChange: React.ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+  >;
 }
 
-export function Select({ options, label }: ISelect) {
-    return (
-        <div className="flex flex-col w-full">
-            <label>{label}</label>
-        <select className="border border-primary rounded-lg p-2 text-sm outline-none">
-            {options.map((option, index) => <option key={index} value={option.value}>{option.label}</option>)}
-        </select>
-        </div>
-    )
+export function Select({
+  options,
+  defaultOption,
+  label,
+  value = '',
+  name,
+  onChange,
+}: ISelect) {
+  return (
+    <div className="flex flex-col w-full">
+      <label>{label}</label>
+      <select
+        name={name}
+        onChange={onChange}
+        value={value}
+        className="border border-primary rounded-lg p-2 text-sm outline-none"
+        required
+      >
+        <option value="">{defaultOption}</option>
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
 }
