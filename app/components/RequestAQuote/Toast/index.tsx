@@ -1,3 +1,5 @@
+'use client';
+
 import { Check, CircleX } from 'lucide-react';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
