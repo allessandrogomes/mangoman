@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
 interface ICard {
   src: string;
   altImage: string;
@@ -30,11 +29,11 @@ export function Card({
             Premium{' '}
           </span>
         )}
-        <div className="max-w-[150px] rounded-full p-2 border border-b border-tertiary ribbon transition-transform duration-2000 group-hover:scale-115">
+        <div className="w-[150px] h-[150px] rounded-full p-2 border border-b border-tertiary ribbon transition-transform duration-2000 group-hover:scale-115">
           <img
             src={src}
             alt={altImage}
-            className="transition-transform duration-2000 group-hover:rotate-360 min-h-[132px] object-contain"
+            className="w-full h-full object-cover rounded-full transition-transform duration-2000 group-hover:rotate-360"
           />
         </div>
         <h3 className="text-2xl text-center font-bold border-b border-tertiary p-2 bg-gradient-to-br from-tertiary to-red-500 bg-clip-text text-transparent">

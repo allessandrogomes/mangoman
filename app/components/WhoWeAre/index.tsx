@@ -5,18 +5,18 @@ import { SectionLayout } from '../shared/SectionLayout';
 
 export const WhoWeAre = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <SectionLayout ref={ref}>
+    <SectionLayout id="who" ref={ref}>
       <HeaderSection
         title="Who We Are"
         subtitle="A company specialized in the export of Brazilian mangoes, committed to quality, traceability, and global service"
       />
 
       <div className="w-auto flex items-center justify-center bg-gradient-to-br from-primary to-green-700 -mx-5 xl:-mx-20 py-10 xl:py-20">
-        <div className="max-w-[800px] flex flex-col sm:items-center gap-6 xl:gap-10 bg-secondary rounded-lg shadow-lg p-5 sm:p-10 mx-5 xl:mx-20">
+        <div className="w-full max-w-[1000px] flex flex-col sm:items-center gap-6 xl:gap-10 bg-secondary rounded-lg shadow-lg p-5 sm:p-10 mx-5 xl:mx-20">
           <h3 className="w-max text-3xl text-center self-center uppercase border-b pb-1 font-bold">
             MangoMan
           </h3>
-          <div className="flex flex-col sm:flex-row gap-5 border border-[#CCCCCC] p-5 rounded-lg bg-secondary shadow-[0_0_20px_rgba(0,0,0,0.15)]">
+          <div className="max-w-[800px] flex flex-col sm:flex-row gap-5 border border-[#CCCCCC] p-5 rounded-lg bg-secondary shadow-[0_0_20px_rgba(0,0,0,0.15)]">
             <div className="w-full sm:w-[350px] h-full min-h-[300px] flex-1 bg-[url(/ceo.jpg)] bg-cover bg-no-repeat rounded-lg"></div>
             <p className="flex-1 text-justify text-sm text-black opacity-90">
               MangoMan is a reference in the export of high-quality mangoes,
@@ -30,7 +30,7 @@ export const WhoWeAre = forwardRef<HTMLElement>((_, ref) => {
             </p>
           </div>
 
-          <div className="flex flex-col justify-between gap-6 xl:gap-5.5 text-secondary border-1 border-[#CCCCCC] rounded-lg p-5 bg-secondary shadow-[0_0_20px_rgba(0,0,0,0.15)]">
+          <div className="max-w-[800px] flex flex-col justify-between gap-6 xl:gap-5.5 text-secondary border-1 border-[#CCCCCC] rounded-lg p-5 bg-secondary shadow-[0_0_20px_rgba(0,0,0,0.15)]">
             <div>
               <h4 className="flex gap-4 text-primary items-center text-base xl:text-xl uppercase font-bold mb-1">
                 Our Story{' '}

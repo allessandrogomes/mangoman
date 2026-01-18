@@ -292,7 +292,7 @@ const items = [
 
 export const Gallery = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <SectionLayout className="relative" ref={ref}>
+    <SectionLayout id="gallery" className="relative" ref={ref}>
       <HeaderSection
         title="Photo gallery"
         subtitle="Get to know our production, facilities, and quality up close"

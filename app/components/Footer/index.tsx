@@ -2,7 +2,27 @@
 /* eslint-disable @next/next/no-img-element */
 import { Mail, MapPin, Phone } from 'lucide-react';
 
-export function Footer() {
+interface IFooterProps {
+  onHero: () => void;
+  onWhoWeAre: () => void;
+  onVarieties: () => void;
+  onQuality: () => void;
+  onCertifications: () => void;
+  onGallery: () => void;
+  onWhere: () => void;
+  onQuote: () => void;
+}
+
+export function Footer({
+  onHero,
+  onWhoWeAre,
+  onVarieties,
+  onQuality,
+  onCertifications,
+  onGallery,
+  onWhere,
+  onQuote,
+}: IFooterProps) {
   return (
     <footer className="flex flex-col md:flex-row gap-10 md:gap-5 md:justify-around flex-wrap bg-tertiary text-xs min-[375px]:text-sm text-secondary p-5 xl:p-10">
       <div className="h-full flex flex-col gap-3 justify-center max-w-[400px]">
@@ -29,28 +49,52 @@ export function Footer() {
         <h3 className="uppercase font-bold mb-5 text-2xl">Web Map</h3>
         <nav>
           <ul className="flex flex-col gap-2">
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onHero}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               Home
             </li>
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onWhoWeAre}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               About
             </li>
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onVarieties}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               Products
             </li>
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onQuality}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               Processes
             </li>
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onCertifications}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               Certifications
             </li>
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onGallery}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               Gallery
             </li>
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onWhere}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               Localization
             </li>
-            <li className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300">
+            <li
+              onClick={onQuote}
+              className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
+            >
               Contact
             </li>
           </ul>

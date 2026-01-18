@@ -2,7 +2,17 @@
 'use client';
 
 import { Instagram, Linkedin, Mail, Menu, Phone } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+export type Section =
+  | 'hero'
+  | 'who'
+  | 'varieties'
+  | 'quality'
+  | 'certifications'
+  | 'gallery'
+  | 'where'
+  | 'quote';
 
 interface IHeaderProps {
   onHero: () => void;
@@ -26,6 +36,63 @@ export function Header({
   onQuote,
 }: IHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<Section>('hero');
+
+  useEffect(() => {
+    const sections: Section[] = [
+      'hero',
+      'who',
+      'varieties',
+      'quality',
+      'certifications',
+      'gallery',
+      'where',
+      'quote',
+    ];
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id as Section);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
+
+    sections.forEach((sectionId) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sections.forEach((sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
+  const navItemClass = (section: Section) =>
+    `cursor-pointer border-b-2 transition-colors duration-300
+   ${
+     activeSection === section
+       ? 'border-primary'
+       : 'border-transparent hover:border-primary'
+   }`;
 
   return (
     <header className="fixed z-1000 bg-secondary w-full">
@@ -52,6 +119,18 @@ export function Header({
           >
             <Linkedin />
           </a>
+          <a
+            href="mailto:willianaislan@mangomanexportbrazil.com"
+            className="lg:hidden hover:opacity-80 transition-opacity text-sm"
+          >
+            <Mail />
+          </a>
+          <a
+            href="tel:+5574981334117"
+            className="lg:hidden hover:opacity-80 transition-opacity text-sm"
+          >
+            <Phone />
+          </a>
         </div>
       </div>
 
@@ -66,50 +145,74 @@ export function Header({
         <nav className="hidden lg:block">
           <ul className="flex gap-6">
             <li
-              onClick={onHero}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onHero();
+                setActiveSection('hero');
+              }}
+              className={navItemClass('hero')}
             >
               Home
             </li>
             <li
-              onClick={onWhoWeAre}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onWhoWeAre();
+                setActiveSection('who');
+              }}
+              className={navItemClass('who')}
             >
               About
             </li>
             <li
-              onClick={onVarieties}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onVarieties();
+                setActiveSection('varieties');
+              }}
+              className={navItemClass('varieties')}
             >
               Products
             </li>
             <li
-              onClick={onQuality}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onQuality();
+                setActiveSection('quality');
+              }}
+              className={navItemClass('quality')}
             >
               Processes
             </li>
             <li
-              onClick={onCertifications}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onCertifications();
+                setActiveSection('certifications');
+              }}
+              className={navItemClass('certifications')}
             >
               Certifications
             </li>
             <li
-              onClick={onGallery}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onGallery();
+                setActiveSection('gallery');
+              }}
+              className={navItemClass('gallery')}
             >
               Gallery
             </li>
             <li
-              onClick={onWhere}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onWhere();
+                setActiveSection('where');
+              }}
+              className={navItemClass('where')}
             >
               Localization
             </li>
             <li
-              onClick={onQuote}
-              className="cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors duration-300"
+              onClick={() => {
+                onQuote();
+                setActiveSection('quote');
+              }}
+              className={navItemClass('quote')}
             >
               Contact
             </li>
@@ -141,7 +244,7 @@ export function Header({
                 onHero();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'hero' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               Home
             </li>
@@ -151,7 +254,7 @@ export function Header({
                 onWhoWeAre();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'who' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               About
             </li>
@@ -161,7 +264,7 @@ export function Header({
                 onVarieties();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'varieties' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               Products
             </li>
@@ -171,7 +274,7 @@ export function Header({
                 onQuality();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'quality' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               Processes
             </li>
@@ -181,7 +284,7 @@ export function Header({
                 onCertifications();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'certifications' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               Certifications
             </li>
@@ -191,7 +294,7 @@ export function Header({
                 onGallery();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'gallery' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               Gallery
             </li>
@@ -201,7 +304,7 @@ export function Header({
                 onWhere();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'where' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               Localization
             </li>
@@ -211,7 +314,7 @@ export function Header({
                 onQuote();
                 setIsOpen(false);
               }}
-              className="cursor-pointer"
+              className={`${activeSection === 'quote' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
               Contact
             </li>

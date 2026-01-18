@@ -4,7 +4,7 @@ import { SectionLayout } from '../shared/SectionLayout';
 
 export const WhereAreWe = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <SectionLayout className="mb-[200px]" ref={ref}>
+    <SectionLayout id="where" className="mb-[200px]" ref={ref}>
       <HeaderSection
         title="Where are we"
         subtitle="Head office, facilitating access and customer service"

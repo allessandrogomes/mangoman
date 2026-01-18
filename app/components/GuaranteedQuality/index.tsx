@@ -6,7 +6,7 @@ import { forwardRef } from 'react';
 
 export const GuaranteedQuality = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <SectionLayout className="mb-[200px]" ref={ref}>
+    <SectionLayout id="quality" className="mb-[200px]" ref={ref}>
       <HeaderSection
         title="Guaranteed quality"
         subtitle="From harvest to shipment, we follow rigorous standards to ensure freshness, safety, and global compliance"

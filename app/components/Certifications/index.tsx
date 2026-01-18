@@ -24,7 +24,7 @@ const certifications = [
 
 export const Certifications = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <SectionLayout className="mb-[200px]" ref={ref}>
+    <SectionLayout id="certifications" className="mb-[200px]" ref={ref}>
       <HeaderSection
         title="Certifications"
         subtitle="We comply with the main international standards for fruit exports"

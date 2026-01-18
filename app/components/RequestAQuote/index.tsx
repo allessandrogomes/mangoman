@@ -56,6 +56,7 @@ const interests = [
 ];
 
 type FormData = {
+  access_key: string;
   nome: string;
   empresa: string;
   pais: string;
@@ -71,9 +72,12 @@ type Toast = {
   type: 'success' | 'error';
 };
 
+const ACCESS_KEY = '1100e41b-b740-4208-b85b-807e4a356332';
+
 export const RequestAQuote = forwardRef<HTMLElement>((_, ref) => {
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState<FormData>({
+    access_key: ACCESS_KEY,
     nome: '',
     empresa: '',
     pais: '',
@@ -84,7 +88,7 @@ export const RequestAQuote = forwardRef<HTMLElement>((_, ref) => {
   });
   const [toast, setToast] = useState<Toast>({
     message: '',
-    visible: true,
+    visible: false,
     type: 'success',
   });
 
@@ -107,17 +111,14 @@ export const RequestAQuote = forwardRef<HTMLElement>((_, ref) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(
-        'https://formsubmit.co/791e9e93113511da7125642bfbac7012',
-        {
-          method: 'POST',
-          body: JSON.stringify(formData),
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-      );
+      });
 
       if (!response.ok) {
         throw new Error();
@@ -143,7 +144,8 @@ export const RequestAQuote = forwardRef<HTMLElement>((_, ref) => {
   };
 
   const resetForm = () => {
-    setFormData({
+    setFormData((prev) => ({
+      ...prev,
       nome: '',
       empresa: '',
       pais: '',
@@ -151,11 +153,12 @@ export const RequestAQuote = forwardRef<HTMLElement>((_, ref) => {
       telefone: '',
       interesse: '',
       mensagem: '',
-    });
+    }));
   };
 
   return (
     <SectionLayout
+      id="quote"
       className="bg-gradient-to-b from-primary to-green-900 pb-20"
       ref={ref}
     >

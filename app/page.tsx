@@ -72,7 +72,16 @@ export default function Home() {
         </a>
       </main>
 
-      <Footer />
+      <Footer
+        onHero={() => scrollTo(heroRef)}
+        onWhoWeAre={() => scrollTo(whoWeAreRef)}
+        onVarieties={() => scrollTo(varietiesRef)}
+        onQuality={() => scrollTo(qualityRef)}
+        onCertifications={() => scrollTo(certificationsRef)}
+        onGallery={() => scrollTo(galleryRef)}
+        onWhere={() => scrollTo(whereAreWeRef)}
+        onQuote={() => scrollTo(quoteRef)}
+      />
     </>
   );
 }
