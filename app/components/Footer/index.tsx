@@ -3,6 +3,21 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 interface IFooterProps {
+  footer: {
+    localization: string;
+    copyright: string;
+    developed_by: string;
+    navbar: {
+      home: string;
+      about: string;
+      products: string;
+      processes: string;
+      certifications: string;
+      gallery: string;
+      localization: string;
+      contact: string;
+    };
+  };
   onHero: () => void;
   onWhoWeAre: () => void;
   onVarieties: () => void;
@@ -14,6 +29,7 @@ interface IFooterProps {
 }
 
 export function Footer({
+  footer,
   onHero,
   onWhoWeAre,
   onVarieties,
@@ -34,8 +50,9 @@ export function Footer({
           />
         </a>
         <h4 className="flex gap-1 font-semibold">
-          <MapPin className="min-w-[20px]" size={20} /> Empresarial Trade Center
-          - R. Joaquim Nabuco, 9° Floor - Center, Petrolina - PE, 56304-040
+          <MapPin className="min-w-[20px]" size={20} />{' '}
+          {footer.localization ??
+            'Empresarial Trade Center - R. Joaquim Nabuco, 9° Floor - Center, Petrolina - PE, 56304-040'}
         </h4>
         <h4 className="flex gap-1 font-semibold">
           <Mail size={20} /> willianaislan@mangomanexportbrazil.com
@@ -53,49 +70,49 @@ export function Footer({
               onClick={onHero}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              Home
+              {footer.navbar.home ?? 'Home'}
             </li>
             <li
               onClick={onWhoWeAre}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              About
+              {footer.navbar.about ?? 'About'}
             </li>
             <li
               onClick={onVarieties}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              Products
+              {footer.navbar.products ?? 'Products'}
             </li>
             <li
               onClick={onQuality}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              Processes
+              {footer.navbar.processes ?? 'Processes'}
             </li>
             <li
               onClick={onCertifications}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              Certifications
+              {footer.navbar.certifications ?? 'Certifications'}
             </li>
             <li
               onClick={onGallery}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              Gallery
+              {footer.navbar.gallery ?? 'Gallery'}
             </li>
             <li
               onClick={onWhere}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              Localization
+              {footer.navbar.localization ?? 'Localization'}
             </li>
             <li
               onClick={onQuote}
               className="w-max cursor-pointer border-b-2 border-transparent hover:border-secondary transition-colors duration-300"
             >
-              Contact
+              {footer.navbar.contact ?? 'Contact'}
             </li>
           </ul>
         </nav>
@@ -103,10 +120,11 @@ export function Footer({
 
       <div className="flex flex-col gap-2">
         <h4>
-          All rights reserved <strong>MangoMan</strong> &copy; 2026
+          {footer.copyright ?? 'All rights reserved'} <strong>MangoMan</strong>{' '}
+          &copy; 2026
         </h4>
         <h4>
-          Developed by{' '}
+          {footer.developed_by ?? 'Developed by'}{' '}
           <a
             href="https://valebytes.com.br"
             target="_blank"

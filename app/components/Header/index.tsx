@@ -1,7 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { Instagram, Linkedin, Mail, Menu, Phone } from 'lucide-react';
+import {
+  Instagram,
+  Languages,
+  Linkedin,
+  Mail,
+  Menu,
+  Phone,
+} from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export type Section =
@@ -15,6 +23,19 @@ export type Section =
   | 'quote';
 
 interface IHeaderProps {
+  header: {
+    language: string;
+    navbar: {
+      home: string;
+      about: string;
+      products: string;
+      processes: string;
+      certifications: string;
+      gallery: string;
+      localization: string;
+      contact: string;
+    };
+  };
   onHero: () => void;
   onWhoWeAre: () => void;
   onVarieties: () => void;
@@ -25,7 +46,11 @@ interface IHeaderProps {
   onQuote: () => void;
 }
 
+const SUPPORTED_LOCALES = ['en', 'pt-br', 'es', 'fr'] as const;
+type Locale = (typeof SUPPORTED_LOCALES)[number];
+
 export function Header({
+  header,
   onHero,
   onWhoWeAre,
   onVarieties,
@@ -37,6 +62,16 @@ export function Header({
 }: IHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<Section>('hero');
+
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const [locale, setLocale] = useState<Locale>('en');
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLocale = e.target.value as Locale;
+    router.push(`/${newLocale}`);
+  };
 
   useEffect(() => {
     const sections: Section[] = [
@@ -86,6 +121,15 @@ export function Header({
     };
   }, []);
 
+  useEffect(() => {
+    const segment = pathname.split('/').filter(Boolean)[0];
+
+    if (SUPPORTED_LOCALES.includes(segment as Locale)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLocale(segment as Locale);
+    }
+  }, [pathname]);
+
   const navItemClass = (section: Section) =>
     `cursor-pointer border-b-2 transition-colors duration-300
    ${
@@ -132,6 +176,30 @@ export function Header({
             <Phone />
           </a>
         </div>
+
+        <div className="flex items-center gap-2">
+          <span className="flex items-center gap-1">
+            <Languages size={20} /> {header.language ?? 'Language'}:
+          </span>
+          <select
+            value={locale}
+            onChange={handleChange}
+            className="border-1 rounded-lg outline-none text-center"
+          >
+            <option className="text-black" value="en">
+              English
+            </option>
+            <option className="text-black" value="pt-br">
+              Português - Brasil
+            </option>
+            <option className="text-black" value="es">
+              Español
+            </option>
+            <option className="text-black" value="fr">
+              Français
+            </option>
+          </select>
+        </div>
       </div>
 
       {/* Cabeçalho de navegação */}
@@ -151,7 +219,7 @@ export function Header({
               }}
               className={navItemClass('hero')}
             >
-              Home
+              {header.navbar.home ?? 'Home'}
             </li>
             <li
               onClick={() => {
@@ -160,7 +228,7 @@ export function Header({
               }}
               className={navItemClass('who')}
             >
-              About
+              {header.navbar.about ?? 'About'}
             </li>
             <li
               onClick={() => {
@@ -169,7 +237,7 @@ export function Header({
               }}
               className={navItemClass('varieties')}
             >
-              Products
+              {header.navbar.products ?? 'Products'}
             </li>
             <li
               onClick={() => {
@@ -178,7 +246,7 @@ export function Header({
               }}
               className={navItemClass('quality')}
             >
-              Processes
+              {header.navbar.processes ?? 'Processes'}
             </li>
             <li
               onClick={() => {
@@ -187,7 +255,7 @@ export function Header({
               }}
               className={navItemClass('certifications')}
             >
-              Certifications
+              {header.navbar.certifications ?? 'Certifications'}
             </li>
             <li
               onClick={() => {
@@ -196,7 +264,7 @@ export function Header({
               }}
               className={navItemClass('gallery')}
             >
-              Gallery
+              {header.navbar.gallery ?? 'Gallery'}
             </li>
             <li
               onClick={() => {
@@ -205,7 +273,7 @@ export function Header({
               }}
               className={navItemClass('where')}
             >
-              Localization
+              {header.navbar.localization ?? 'Localization'}
             </li>
             <li
               onClick={() => {
@@ -214,7 +282,7 @@ export function Header({
               }}
               className={navItemClass('quote')}
             >
-              Contact
+              {header.navbar.contact ?? 'Contact'}
             </li>
           </ul>
         </nav>
@@ -246,7 +314,7 @@ export function Header({
               }}
               className={`${activeSection === 'hero' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              Home
+              {header.navbar.home ?? 'Home'}
             </li>
 
             <li
@@ -256,7 +324,7 @@ export function Header({
               }}
               className={`${activeSection === 'who' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              About
+              {header.navbar.about ?? 'About'}
             </li>
 
             <li
@@ -266,7 +334,7 @@ export function Header({
               }}
               className={`${activeSection === 'varieties' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              Products
+              {header.navbar.products ?? 'Products'}
             </li>
 
             <li
@@ -276,7 +344,7 @@ export function Header({
               }}
               className={`${activeSection === 'quality' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              Processes
+              {header.navbar.processes ?? 'Processes'}
             </li>
 
             <li
@@ -286,7 +354,7 @@ export function Header({
               }}
               className={`${activeSection === 'certifications' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              Certifications
+              {header.navbar.certifications ?? 'Certifications'}
             </li>
 
             <li
@@ -296,7 +364,7 @@ export function Header({
               }}
               className={`${activeSection === 'gallery' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              Gallery
+              {header.navbar.gallery ?? 'Gallery'}
             </li>
 
             <li
@@ -306,7 +374,7 @@ export function Header({
               }}
               className={`${activeSection === 'where' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              Localization
+              {header.navbar.localization ?? 'Localization'}
             </li>
 
             <li
@@ -316,7 +384,7 @@ export function Header({
               }}
               className={`${activeSection === 'quote' && 'border-primary border-b-2 '} cursor-pointer w-max`}
             >
-              Contact
+              {header.navbar.contact ?? 'Contact'}
             </li>
           </ul>
         </div>
