@@ -52,7 +52,7 @@ export const WhoWeAre = forwardRef<HTMLElement, IWhoWeAre>(({ about }, ref) => {
               <h4 className="flex gap-4 text-primary items-center text-base xl:text-xl uppercase font-bold mb-1">
                 {about.our_story.title ?? 'Our Story'}{' '}
                 <img
-                  src="./mango-icon.png"
+                  src="/mango-icon.png"
                   alt="Ícone de manga"
                   className="relative bottom-1 w-[30px] h-[30px]"
                 />
@@ -67,7 +67,7 @@ export const WhoWeAre = forwardRef<HTMLElement, IWhoWeAre>(({ about }, ref) => {
               <h4 className="flex gap-4 text-primary items-center text-base xl:text-xl uppercase font-bold mb-1">
                 {about.our_mission.title ?? 'Our Mission'}{' '}
                 <img
-                  src="./coconut-icon.png"
+                  src="/coconut-icon.png"
                   alt="Ícone de côco"
                   className="relative bottom-1 w-[30px] h-[30px]"
                 />
@@ -83,7 +83,7 @@ export const WhoWeAre = forwardRef<HTMLElement, IWhoWeAre>(({ about }, ref) => {
                 {about.our_commitment_to_quality.title ??
                   'Our Commitment to Quality'}{' '}
                 <img
-                  src="./lemon-icon.png"
+                  src="/lemon-icon.png"
                   alt="Ícone de limão"
                   className="relative bottom-1 w-[30px] h-[30px]"
                 />

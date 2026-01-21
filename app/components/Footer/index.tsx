@@ -44,7 +44,7 @@ export function Footer({
       <div className="h-full flex flex-col gap-3 justify-center max-w-[400px]">
         <a href="#" className="mb-5 w-40">
           <img
-            src="./logo-white.svg"
+            src="/logo-white.svg"
             alt="MangoMan Logo"
             className="object-cover w-full"
           />

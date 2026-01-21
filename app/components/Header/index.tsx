@@ -206,7 +206,7 @@ export function Header({
       <div className="h-20 flex justify-between items-center px-5 lg:px-20">
         {/* Logo */}
         <a href="#" className="w-40">
-          <img src="./logo.png" alt="MangoMan Logo" className="object-cover" />
+          <img src="/logo.png" alt="MangoMan Logo" className="object-cover" />
         </a>
 
         {/* Barra de navegação */}
