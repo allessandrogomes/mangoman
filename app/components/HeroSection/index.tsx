@@ -11,7 +11,7 @@ export const HeroSection = forwardRef<HTMLElement, IHeroSection>(
   ({ home }, ref) => {
     return (
       <section id="hero" className="h-[calc(100dvh-120px)]" ref={ref}>
-        <div className="w-full h-full overflow-hidden relative bg-[url(/background.png)] bg-cover bg-center">
+        <div className="w-full h-full overflow-hidden relative bg-[url(/background.jpg)] bg-cover bg-center">
           <div className="mx-5 lg:mx-50 h-full flex flex-col justify-center lg:max-w-[700px] gap-4 pb-5 min-[760px]:text-center min-[1024px]:text-start">
             <h1 className="text-white text-4xl lg:text-6xl uppercase font-bold">
               {home.title ?? 'From the northeastern soil to the world!'}

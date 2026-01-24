@@ -38,32 +38,32 @@
     "subtitle": "Selected mangoes, carefully grown and certified for export",
     "products": [
       {
-        "image": "/keitt.jpeg",
+        "image": "/keitt.jpg",
         "name": "Keitt",
         "description": "Keitt is a mango with firm flesh and a mild flavor, low fiber content, and excellent shelf life. Its resistance to handling and consistent quality make it one of the most sought-after varieties for export"
       },
       {
-        "image": "/kent.jpeg",
+        "image": "/kent.jpg",
         "name": "Kent",
         "description": "Kent stands out for its soft, sweet flesh with a hint of acidity, offering a well-balanced flavor experience. Its high keeping quality and resistance to transportation make it ideal for international markets"
       },
       {
-        "image": "/palmer.jpeg",
+        "image": "/palmer.jpg",
         "name": "Palmer",
         "description": "Palmer is a mango with firm, sweet flesh and low fiber content, excellent for fresh consumption and processing. Its long shelf life and resistance to transportation ensure its presence in global markets"
       },
       {
-        "image": "/tommy-atkins.jpeg",
+        "image": "/tommy-atkins.jpg",
         "name": "Tommy Atkins",
         "description": "Tommy Atkins is a robust mango with thick skin and firm flesh. Its sweet, slightly acidic flavor, combined with its resistance to transportation, makes it one of the most widely exported varieties worldwide"
       },
       {
-        "image": "/coconut.png",
+        "image": "/coconut.jpg",
         "name": "Fresh Coconut",
         "description": "Fresh Coconut offers high-quality flesh with a sweet and refreshing flavor. Rich in nutrients and with strong potential for the beverage and derivative markets, it is an excellent option for export"
       },
       {
-        "image": "/limao-taiti.png",
+        "image": "/limao-taiti.jpg",
         "name": "Lemon",
         "description": "Lime is a citrus fruit with a distinctive, refreshing acidity, widely used in the food market. Its versatility and high quality make it a popular choice for a wide range of industrial and commercial applications"
       }

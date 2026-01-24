@@ -38,32 +38,32 @@
     "subtitle": "Mangos seleccionados, cultivados cuidadosamente y certificados para exportación",
     "products": [
       {
-        "image": "/keitt.jpeg",
+        "image": "/keitt.jpg",
         "name": "Keitt",
         "description": "Keitt es un mango de pulpa firme, sabor suave, bajo contenido de fibra y excelente vida útil. Su resistencia al manejo y su calidad constante lo convierten en una de las variedades más demandadas para exportación."
       },
       {
-        "image": "/kent.jpeg",
+        "image": "/kent.jpg",
         "name": "Kent",
         "description": "Kent se destaca por su pulpa suave y dulce con un toque de acidez, ofreciendo una experiencia de sabor equilibrada. Su alta durabilidad y resistencia al transporte la hacen ideal para los mercados internacionales."
       },
       {
-        "image": "/palmer.jpeg",
+        "image": "/palmer.jpg",
         "name": "Palmer",
         "description": "Palmer es un mango de pulpa firme, dulce y con bajo contenido de fibra, ideal para el consumo en fresco y el procesamiento. Su larga vida útil y resistencia al transporte garantizan su presencia en los mercados globales."
       },
       {
-        "image": "/tommy-atkins.jpeg",
+        "image": "/tommy-atkins.jpg",
         "name": "Tommy Atkins",
         "description": "Tommy Atkins es un mango robusto, de piel gruesa y pulpa firme. Su sabor dulce con ligera acidez, junto con su alta resistencia al transporte, lo convierten en una de las variedades más exportadas del mundo."
       },
       {
-        "image": "/coconut.png",
+        "image": "/coconut.jpg",
         "name": "Coco Fresco",
         "description": "El coco fresco ofrece una pulpa de alta calidad, con un sabor dulce y refrescante. Rico en nutrientes y con gran potencial para los mercados de bebidas y derivados, es una excelente opción para exportación."
       },
       {
-        "image": "/limao-taiti.png",
+        "image": "/limao-taiti.jpg",
         "name": "Limón",
         "description": "El limón es un fruto cítrico con una acidez distintiva y refrescante, ampliamente utilizado en la industria alimentaria. Su versatilidad y alta calidad lo convierten en una opción popular para diversas aplicaciones industriales y comerciales."
       }
