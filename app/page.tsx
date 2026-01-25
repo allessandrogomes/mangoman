@@ -1,13 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import '@fontsource/poppins';
-import '@fontsource/poppins/300.css';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/800.css';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { WhoWeAre } from './components/WhoWeAre';
@@ -36,8 +29,7 @@ export default function Home() {
 
     const HEADER_HEIGHT = 120;
 
-    const top =
-      ref.current.getBoundingClientRect().top + window.scrollY - HEADER_HEIGHT;
+    const top = ref.current.offsetTop - HEADER_HEIGHT;
 
     window.scrollTo({ top, behavior: 'smooth' });
   };
