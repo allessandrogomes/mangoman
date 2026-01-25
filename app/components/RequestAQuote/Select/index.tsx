@@ -22,8 +22,9 @@ export function Select({
 }: ISelect) {
   return (
     <div className="flex flex-col w-full">
-      <label>{label}</label>
+      <label htmlFor={name}>{label}</label>
       <select
+        id={name}
         name={name}
         onChange={onChange}
         value={value}

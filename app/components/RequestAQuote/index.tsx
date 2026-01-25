@@ -259,8 +259,11 @@ export const RequestAQuote = forwardRef<HTMLElement, IRequestAQuote>(
                   onChange={handleChange}
                 />
                 <div className="flex flex-col">
-                  <label>{contact.form_fields.message ?? 'Message'}</label>
+                  <label htmlFor="mensagem">
+                    {contact.form_fields.message ?? 'Message'}
+                  </label>
                   <textarea
+                    id="mensagem"
                     name="mensagem"
                     onChange={handleChange}
                     value={formData.mensagem}

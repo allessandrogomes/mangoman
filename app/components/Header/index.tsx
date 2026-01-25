@@ -154,34 +154,47 @@ export function Header({
 
         {/* Redes sociais */}
         <div className="flex gap-4">
-          <a href="https://www.instagram.com/mangomanoficial" target="_blank">
-            <Instagram />
+          <a
+            href="https://www.instagram.com/mangomanoficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram da Mango Man"
+          >
+            <Instagram aria-hidden="true" />
           </a>
+
           <a
             href="https://www.linkedin.com/in/willian-lima-443a084b/"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de Willian Lima"
           >
-            <Linkedin />
+            <Linkedin aria-hidden="true" />
           </a>
+
           <a
             href="mailto:willianaislan@mangomanexportbrazil.com"
             className="lg:hidden hover:opacity-80 transition-opacity text-sm"
+            aria-label="Enviar e-mail"
           >
-            <Mail />
+            <Mail aria-hidden="true" />
           </a>
+
           <a
             href="tel:+5574981334117"
             className="lg:hidden hover:opacity-80 transition-opacity text-sm"
+            aria-label="Ligar para +55 74 98133 4117"
           >
-            <Phone />
+            <Phone aria-hidden="true" />
           </a>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="flex items-center gap-1">
+          <label htmlFor="language" className="flex items-center gap-1">
             <Languages size={20} /> {header.language ?? 'Language'}:
-          </span>
+          </label>
           <select
+            id="language"
             value={locale}
             onChange={handleChange}
             className="border-1 rounded-lg outline-none text-center"
@@ -288,8 +301,12 @@ export function Header({
         </nav>
 
         {/* Botão menu mobile */}
-        <button className="lg:hidden" onClick={() => setIsOpen(true)}>
-          <Menu />
+        <button
+          className="lg:hidden"
+          aria-label="Abrir menu"
+          onClick={() => setIsOpen(true)}
+        >
+          <Menu aria-hidden="true" />
         </button>
 
         {/* Overlay (fundo escuro) */}

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { Mail, MapPin, Phone } from 'lucide-react';
 
@@ -134,7 +133,11 @@ export function Footer({
           </a>
         </h4>
         <a href="https://valebytes.com.br" target="_blank" className="mt-5">
-          <img src="/valebytes-logo.png" className="w-[100px]" />
+          <img
+            src="/valebytes-logo.png"
+            className="w-[100px]"
+            alt="ValeBytes Logo"
+          />
         </a>
       </div>
     </footer>
