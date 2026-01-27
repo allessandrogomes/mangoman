@@ -143,14 +143,6 @@ export function Header({
       {/* Cabeçalho de informações */}
       <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start text-sm gap-2 lg:gap-0 px-10 lg:px-20 py-2 bg-primary text-secondary">
         {/* Contatos */}
-        <div className="hidden lg:flex flex-col lg:flex-row gap-2 lg:gap-8">
-          <span className="flex gap-2 items-center">
-            <Phone /> +55 74 98133-4117
-          </span>
-          <span className="flex gap-2 items-center">
-            <Mail /> willianaislan@mangomanexportbrazil.com
-          </span>
-        </div>
 
         {/* Redes sociais */}
         <div className="flex gap-4">

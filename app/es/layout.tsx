@@ -63,6 +63,9 @@ export const metadata: Metadata = {
       url: '/apple-touch-icon-precomposed.png',
     },
   },
+  other: {
+    google: 'notranslate',
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -70,6 +70,9 @@ export const metadata: Metadata = {
       url: '/apple-touch-icon-precomposed.png',
     },
   },
+  other: {
+    google: 'notranslate',
+  },
 };
 
 export default function RootLayout({
