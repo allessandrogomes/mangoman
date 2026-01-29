@@ -306,7 +306,7 @@ export const RequestAQuote = forwardRef<HTMLElement, IRequestAQuote>(
 
           <div className="hidden lg:block flex-1 max-h-[500px]">
             <img
-              src="/manga-form.png"
+              src="/man.png"
               className="w-full h-full object-contain scale-60"
               alt="Mango"
             />
