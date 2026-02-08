@@ -96,7 +96,7 @@ export const WhoWeAre = forwardRef<HTMLElement, IWhoWeAre>(({ about }, ref) => {
           </div>
           <div className='lg:w-[800px] border border-[#CCCCCC] p-5 rounded-lg bg-secondary shadow-[0_0_20px_rgba(0,0,0,0.15)]'>
             <a target='_blank' href='https://www.freshplaza.com/north-america/article/9794347/brazilian-mango-needs-to-strengthen-planning-to-ensure-stability-in-future-seasons/'>
-              <img src='./interview.png' alt='MangoMan interview image post' />
+              <img src='/interview.png' alt='MangoMan interview image post' />
             </a>
           </div>
         </div>
