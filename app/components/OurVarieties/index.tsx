@@ -15,7 +15,7 @@ interface OurVarietiesProps {
 export const OurVarieties = forwardRef<HTMLElement, OurVarietiesProps>(
   ({ raw, products }, ref) => {
 
-    if (!products) return null;
+    if (!products || !products.length) return null;
 
     return (
       <SectionLayout id="varieties" ref={ref}>

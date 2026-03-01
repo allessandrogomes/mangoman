@@ -13,17 +13,17 @@ interface ProductsResponse {
   data: IProduct[];
 }
 
-async function getProducts() {
+async function getProducts(locale: string) {
   const { data } = await api.get<ProductsResponse>(
-    '/products?populate[imagem][fields][0]=url',
+    `/products?locale=${locale}&populate[imagem][fields][0]=url`,
   );
   return data;
 }
 
-export function useGetProducts() {
+export function useGetProducts(locale: string) {
   return useQuery({
     queryKey: ['products'],
-    queryFn: getProducts,
+    queryFn: () => getProducts(locale),
     refetchOnWindowFocus: false,
   });
 }

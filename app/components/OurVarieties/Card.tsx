@@ -1,3 +1,5 @@
+import { getImageUrl } from "@/app/utils/get-image-url";
+
 /* eslint-disable @next/next/no-img-element */
 interface ICard {
   src: string;
@@ -31,7 +33,7 @@ export function Card({
         )}
         <div className="w-[150px] h-[150px] rounded-full p-2 border border-b border-tertiary ribbon transition-transform duration-2000 group-hover:scale-115">
           <img
-            src={src}
+            src={getImageUrl(src)}
             alt={altImage}
             className="w-full h-full object-cover rounded-full transition-transform duration-2000 group-hover:rotate-360"
           />
