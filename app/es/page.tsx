@@ -25,7 +25,7 @@ export default function Home() {
   const whereAreWeRef = useRef<HTMLElement | null>(null);
   const quoteRef = useRef<HTMLElement | null>(null);
 
-  const { data: products } = useGetProducts('es');
+  const { data: products, isLoading: isLoadingProducts } = useGetProducts('es');
 
   const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
     if (!ref.current) return;
@@ -56,6 +56,7 @@ export default function Home() {
         <WhoWeAre about={data.about} ref={whoWeAreRef} />
         <OurVarieties
           ref={varietiesRef}
+          isLoading={isLoadingProducts}
           products={products?.data}
           raw={data.products}
         />
