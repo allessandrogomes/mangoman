@@ -57,7 +57,7 @@ export default function Home() {
         <OurVarieties
           ref={varietiesRef}
           products={products?.data}
-          raw={undefined}
+          raw={data.products}
         />
         <GuaranteedQuality processes={data.processes} ref={qualityRef} />
         <Certifications

@@ -35,39 +35,7 @@
   },
   "products": {
     "title": "Nos variétés",
-    "subtitle": "Mangues sélectionnées, cultivées avec soin et certifiées pour l’exportation",
-    "products": [
-      {
-        "image": "/keitt.jpg",
-        "name": "Keitt",
-        "description": "La mangue Keitt possède une chair ferme, une saveur douce, une faible teneur en fibres et une excellente durée de conservation. Sa résistance à la manipulation et sa qualité constante en font l’une des variétés les plus recherchées pour l’exportation."
-      },
-      {
-        "image": "/kent.jpg",
-        "name": "Kent",
-        "description": "La Kent se distingue par sa chair tendre et sucrée avec une légère touche d’acidité, offrant une expérience gustative équilibrée. Sa bonne conservation et sa résistance au transport la rendent idéale pour les marchés internationaux."
-      },
-      {
-        "image": "/palmer.jpg",
-        "name": "Palmer",
-        "description": "La Palmer est une mangue à la chair ferme et sucrée, avec peu de fibres, idéale pour la consommation fraîche et la transformation. Sa longue durée de conservation et sa résistance au transport garantissent sa présence sur les marchés mondiaux."
-      },
-      {
-        "image": "/tommy-atkins.jpg",
-        "name": "Tommy Atkins",
-        "description": "La Tommy Atkins est une mangue robuste à la peau épaisse et à la chair ferme. Sa saveur douce légèrement acidulée, combinée à sa résistance au transport, en fait l’une des variétés les plus exportées au monde."
-      },
-      {
-        "image": "/coconut.jpg",
-        "name": "Noix de coco fraîche",
-        "description": "La noix de coco fraîche offre une chair de haute qualité, au goût doux et rafraîchissant. Riche en nutriments et avec un fort potentiel pour les marchés des boissons et des produits dérivés, elle constitue une excellente option pour l’exportation."
-      },
-      {
-        "image": "/limao-taiti.jpg",
-        "name": "Citron vert",
-        "description": "Le citron vert est un agrume à l’acidité distinctive et rafraîchissante, largement utilisé dans le secteur alimentaire. Sa polyvalence et sa haute qualité en font un choix populaire pour de nombreuses applications industrielles et commerciales."
-      }
-    ]
+    "subtitle": "Mangues sélectionnées, cultivées avec soin et certifiées pour l’exportation"
   },
   "processes": {
     "title": "Qualité garantie",
