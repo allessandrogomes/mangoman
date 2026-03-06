@@ -31,7 +31,14 @@
     "our_commitment_to_quality": {
       "title": "Nosso Compromisso com a Qualidade",
       "paragraph": "A Mango Man é movida por um compromisso inabalável com a qualidade. Selecionamos cuidadosamente nossas mangas, aplicando as melhores práticas agrícolas para garantir que cada fruta atenda aos mais altos padrões. Do cultivo ao transporte, monitoramos cada etapa do processo para assegurar que nossas mangas cheguem ao cliente final com o frescor e o sabor excepcionais pelos quais somos reconhecidos. Nosso compromisso com a qualidade vai além do produto final, estendendo-se ao atendimento, à transparência e à busca constante por melhorias — sempre focados em superar as expectativas de nossos clientes."
-    }
+    },
+    "stats": [
+      { "value": "80%", "label": "Produção da Bahia" },
+      { "value": "20+", "label": "Países atendidos" },
+      { "value": "100%", "label": "Produção rastreável" },
+      { "value": "4", "label": "Certificações internacionais" }
+    ],
+    "media_highlight": "Destaque na mídia"
   },
   "products": {
     "title": "Nossas variedades",

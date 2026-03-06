@@ -31,7 +31,14 @@
     "our_commitment_to_quality": {
       "title": "Notre engagement envers la qualité",
       "paragraph": "Mango Man est guidée par un engagement inébranlable envers la qualité. Nous sélectionnons soigneusement nos mangues et appliquons les meilleures pratiques agricoles afin de garantir que chaque fruit réponde aux normes les plus élevées. De la culture au transport, nous surveillons chaque étape du processus pour assurer que nos mangues arrivent au client final avec la fraîcheur et la saveur exceptionnelles qui font notre réputation. Notre engagement envers la qualité va au-delà du produit final et s’étend au service, à la transparence et à une recherche constante d’amélioration, toujours dans le but de dépasser les attentes de nos clients."
-    }
+    },
+    "stats": [
+      { "value": "80%", "label": "Production de Bahia" },
+      { "value": "20+", "label": "Pays desservis" },
+      { "value": "100%", "label": "Production traçable" },
+      { "value": "4", "label": "Certifications internationales" }
+    ],
+    "media_highlight": "À la une des médias"
   },
   "products": {
     "title": "Nos variétés",

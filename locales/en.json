@@ -31,7 +31,14 @@
     "our_commitment_to_quality": {
       "title": "Our Commitment to Quality",
       "paragraph": "Mango Man is driven by an unwavering commitment to quality. We carefully select our mangoes, applying best agricultural practices to ensure that each fruit meets the highest standards. From cultivation to transportation, we monitor every stage of the process to guarantee that our mangoes reach the final customer with the exceptional freshness and flavor for which we are known. Our commitment to quality goes beyond the final product, extending to service, transparency, and a constant pursuit of improvement—always focused on exceeding our clients’ expectations."
-    }
+    },
+    "stats": [
+      { "value": "80%", "label": "Production from Bahia" },
+      { "value": "20+", "label": "Countries served" },
+      { "value": "100%", "label": "Traceable produce" },
+      { "value": "4", "label": "International certifications" }
+    ],
+    "media_highlight": "Featured in media"
   },
   "products": {
     "title": "Our varieties",
