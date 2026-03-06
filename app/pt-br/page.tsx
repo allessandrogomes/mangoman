@@ -13,6 +13,7 @@ import { RequestAQuote } from '../components/RequestAQuote';
 import { Footer } from '../components/Footer';
 import { useRef } from 'react';
 import data from '../../locales/pt-br.json';
+import { useGetProducts } from '../hooks/use-get-products';
 
 export default function Home() {
   const heroRef = useRef<HTMLElement | null>(null);
@@ -23,6 +24,8 @@ export default function Home() {
   const galleryRef = useRef<HTMLElement | null>(null);
   const whereAreWeRef = useRef<HTMLElement | null>(null);
   const quoteRef = useRef<HTMLElement | null>(null);
+
+  const { data: products, isLoading: isLoadingProducts } = useGetProducts('pt-BR');
 
   const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
     if (!ref.current) return;
@@ -51,7 +54,12 @@ export default function Home() {
       <main className="pt-[120px]">
         <HeroSection home={data.home} ref={heroRef} />
         <WhoWeAre about={data.about} ref={whoWeAreRef} />
-        <OurVarieties products={data.products} ref={varietiesRef} />
+        <OurVarieties
+          ref={varietiesRef}
+          isLoading={isLoadingProducts}
+          products={products?.data}
+          raw={data.products}
+        />
         <GuaranteedQuality processes={data.processes} ref={qualityRef} />
         <Certifications
           certifications={data.certifications}
