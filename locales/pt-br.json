@@ -35,7 +35,39 @@
   },
   "products": {
     "title": "Nossas variedades",
-    "subtitle": "Mangas selecionadas, cultivadas com cuidado e certificadas para exportação"
+    "subtitle": "Mangas selecionadas, cultivadas com cuidado e certificadas para exportação",
+    "products": [
+      {
+        "image": "/keitt.jpg",
+        "name": "Keitt",
+        "description": "A Keitt é uma manga de polpa firme, sabor suave, baixo teor de fibras e excelente vida útil. Sua resistência ao manuseio e qualidade consistente fazem dela uma das variedades mais procuradas para exportação."
+      },
+      {
+        "image": "/kent.jpg",
+        "name": "Kent",
+        "description": "A Kent se destaca pela polpa macia e doce, com leve acidez, proporcionando um sabor equilibrado. Sua alta durabilidade e resistência ao transporte a tornam ideal para mercados internacionais."
+      },
+      {
+        "image": "/palmer.jpg",
+        "name": "Palmer",
+        "description": "A Palmer possui polpa firme, doce e com baixo teor de fibras, sendo excelente para consumo in natura e processamento. Sua longa vida útil e resistência ao transporte garantem sua presença nos mercados globais."
+      },
+      {
+        "image": "/tommy-atkins.jpg",
+        "name": "Tommy Atkins",
+        "description": "A Tommy Atkins é uma manga robusta, de casca espessa e polpa firme. Seu sabor doce com leve acidez, aliado à alta resistência ao transporte, faz dela uma das variedades mais exportadas do mundo."
+      },
+      {
+        "image": "/coconut.jpg",
+        "name": "Coco Fresco",
+        "description": "O Coco Fresco oferece polpa de alta qualidade, com sabor doce e refrescante. Rico em nutrientes e com grande potencial para os mercados de bebidas e derivados, é uma excelente opção para exportação."
+      },
+      {
+        "image": "/limao-taiti.jpg",
+        "name": "Limão",
+        "description": "O limão é um fruto cítrico de acidez marcante e refrescante, amplamente utilizado no mercado alimentício. Sua versatilidade e alta qualidade o tornam uma escolha popular para diversas aplicações industriais e comerciais."
+      }
+    ]
   },
   "processes": {
     "title": "Qualidade garantida",
@@ -72,10 +104,22 @@
     "title": "Certificações",
     "subtitle": "Atendemos aos principais padrões internacionais para exportação de frutas",
     "logos": [
-      { "src": "/gap-certificate.png", "alt": "Certificado Global GAP" },
-      { "src": "/grasp-certificate.png", "alt": "Certificado GRASP" },
-      { "src": "/coc-certificate.png", "alt": "Certificado COC" },
-      { "src": "/smeta-certificate.png", "alt": "Certificado SMETA" }
+      {
+        "src": "/gap-certificate.png",
+        "alt": "Certificado Global GAP"
+      },
+      {
+        "src": "/grasp-certificate.png",
+        "alt": "Certificado GRASP"
+      },
+      {
+        "src": "/coc-certificate.png",
+        "alt": "Certificado COC"
+      },
+      {
+        "src": "/smeta-certificate.png",
+        "alt": "Certificado SMETA"
+      }
     ]
   },
   "gallery": {
@@ -386,8 +430,14 @@
       "message": "Mensagem"
     },
     "interests": [
-      { "label": "Compra de mangas", "value": "Compra de mangas" },
-      { "label": "Parceria comercial", "value": "Parceria comercial" },
+      {
+        "label": "Compra de mangas",
+        "value": "Compra de mangas"
+      },
+      {
+        "label": "Parceria comercial",
+        "value": "Parceria comercial"
+      },
       {
         "label": "Distribuição internacional",
         "value": "Distribuição internacional"
@@ -396,7 +446,10 @@
         "label": "Informações sobre exportação",
         "value": "Informações sobre exportação"
       },
-      { "label": "Outros assuntos", "value": "Outros assuntos" }
+      {
+        "label": "Outros assuntos",
+        "value": "Outros assuntos"
+      }
     ],
     "toast_message": {
       "success": "Mensagem enviada com sucesso, entraremos em contato.",
