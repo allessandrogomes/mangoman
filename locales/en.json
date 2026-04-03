@@ -35,7 +35,39 @@
   },
   "products": {
     "title": "Our varieties",
-    "subtitle": "Selected mangoes, carefully grown and certified for export"
+    "subtitle": "Selected mangoes, carefully grown and certified for export",
+    "products": [
+      {
+        "image": "/keitt.jpg",
+        "name": "Keitt",
+        "description": "Keitt is a mango with firm flesh and a mild flavor, low fiber content, and excellent shelf life. Its resistance to handling and consistent quality make it one of the most sought-after varieties for export"
+      },
+      {
+        "image": "/kent.jpg",
+        "name": "Kent",
+        "description": "Kent stands out for its soft, sweet flesh with a hint of acidity, offering a well-balanced flavor experience. Its high keeping quality and resistance to transportation make it ideal for international markets"
+      },
+      {
+        "image": "/palmer.jpg",
+        "name": "Palmer",
+        "description": "Palmer is a mango with firm, sweet flesh and low fiber content, excellent for fresh consumption and processing. Its long shelf life and resistance to transportation ensure its presence in global markets"
+      },
+      {
+        "image": "/tommy-atkins.jpg",
+        "name": "Tommy Atkins",
+        "description": "Tommy Atkins is a robust mango with thick skin and firm flesh. Its sweet, slightly acidic flavor, combined with its resistance to transportation, makes it one of the most widely exported varieties worldwide"
+      },
+      {
+        "image": "/coconut.jpg",
+        "name": "Fresh Coconut",
+        "description": "Fresh Coconut offers high-quality flesh with a sweet and refreshing flavor. Rich in nutrients and with strong potential for the beverage and derivative markets, it is an excellent option for export"
+      },
+      {
+        "image": "/limao-taiti.jpg",
+        "name": "Lemon",
+        "description": "Lime is a citrus fruit with a distinctive, refreshing acidity, widely used in the food market. Its versatility and high quality make it a popular choice for a wide range of industrial and commercial applications"
+      }
+    ]
   },
   "processes": {
     "title": "Guaranteed quality",
@@ -398,8 +430,14 @@
       "message": "Message"
     },
     "interests": [
-      { "label": "Buy mangoes", "value": "Compra de mangas" },
-      { "label": "Business partnership", "value": "Parceria comercial" },
+      {
+        "label": "Buy mangoes",
+        "value": "Compra de mangas"
+      },
+      {
+        "label": "Business partnership",
+        "value": "Parceria comercial"
+      },
       {
         "label": "International distribution",
         "value": "Distribuição internacional"
@@ -408,7 +446,10 @@
         "label": "Export information",
         "value": "Informações sobre exportação"
       },
-      { "label": "Other matters", "value": "Outros assuntos" }
+      {
+        "label": "Other matters",
+        "value": "Outros assuntos"
+      }
     ],
     "toast_message": {
       "success": "Message sent successfully, we will contact you.",

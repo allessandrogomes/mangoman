@@ -8,16 +8,19 @@ import { Loader2 } from 'lucide-react';
 interface OurVarietiesProps {
   products: IProduct[] | undefined | null;
   raw: {
-    title: string,
-    subtitle: string,
+    title: string;
+    subtitle: string;
+    products: {
+      image: string;
+      name: string;
+      description: string;
+    }[];
   } | undefined | null;
   isLoading: boolean;
 }
 
 export const OurVarieties = forwardRef<HTMLElement, OurVarietiesProps>(
   ({ raw, products, isLoading }, ref) => {
-
-    if ((!products && !isLoading) || (products && !products.length)) return null;
 
     return (
       <SectionLayout id="varieties" ref={ref}>
@@ -39,19 +42,22 @@ export const OurVarieties = forwardRef<HTMLElement, OurVarietiesProps>(
                 to-red-500
                 w-auto flex flex-col md:grid md:grid-cols-[300px_300px] lg:grid-cols-[300px_300px_300px] justify-center gap-10 xl:gap-20 p-10 xl:p-20 -mx-5 xl:-mx-20 py-10 xl:py-20"
         >
-          {isLoading ? (
-            <Loader2 color='white' className='animate-spin size-20 absolute top-[20%] left-1/2 -translate-x-1/2' />
-          ) : (
-            products?.map(({ imagem, nome, descricao }, index) => (
-              <Card
-                key={index}
-                src={imagem.url}
-                altImage={nome}
-                title={nome}
-                description={descricao}
-              />
-            ))
-          )}
+          {(isLoading || !products || products.length === 0
+            ? raw?.products ?? []
+            : products.map(({ imagem, nome, descricao }) => ({
+              image: imagem.url,
+              name: nome,
+              description: descricao,
+            }))
+          ).map(({ image, name, description }, index) => (
+            <Card
+              key={index}
+              src={image}
+              altImage={name}
+              title={name}
+              description={description}
+            />
+          ))}
         </div>
       </SectionLayout>
     );
